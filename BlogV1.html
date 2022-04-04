@@ -1,0 +1,382 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://kit.fontawesome.com/8fa8160045.js"
+            crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"
+            crossorigin="anonymous"></script>
+    <style>
+        .container {
+            margin-left: 10%;
+            margin-right: 10%;
+        }
+
+        @media screen and (max-width:1200px) {
+            .container {
+                margin-left: 0%;
+                margin-right: 0%;
+            }
+        }
+
+        @media screen and (max-width:1200px) {
+            .container {
+                margin-left: 0%;
+                margin-right: 0%;
+            }
+        }
+        /*top comunication nav bar start*/
+        .ustbilgi {
+            background-color: aquamarine;
+        }
+
+        .Marka {
+            float: right;
+            display: inline-flex;
+        }
+
+        .iletisim {
+            display: inline-flex;
+        }
+
+        .buttn {
+            cursor: pointer;
+            color: black;
+        }
+
+        .fa-brands {
+            color: black;
+        }
+
+        a {
+            color: black;
+        }
+
+            a:hover {
+                color: white
+            }
+
+                a:hover .fa-brands {
+                    color: white
+                }
+        /*top comunication nav bar end*/
+        /* <!-- top animated gradient START-- >*/
+        .ust {
+            height: 500px;
+            border: 1px;
+            background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+            background-size: 400% 400%;
+            animation: animasyon 15s ease infinite;
+            height: 500px;
+            text-align: center;
+        }
+
+        @keyframes animasyon {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .animationtext {
+            padding-top: 15%;
+            color: white;
+        }
+        /* <!-- top animated gradient END-- >*/
+        /* <!-- NAVBAR START-- >*/
+        .ustaltnav {
+            background-color: darkslategrey;
+            border: 1px solid;
+            list-style-type: none;
+            color: white;
+            list-style: none;
+            height: 100%;
+        }
+
+        .container .ustaltnav {
+            overflow: hidden;
+            position: sticky;
+            top: 0px;
+        }
+
+        input {
+            background: none;
+            border: none;
+            color: white;
+            height: 100%;
+            width: 100%;
+        }
+
+            input:hover {
+                border: 1px;
+                background-color: white;
+                color: black;
+            }
+
+        .btn-group .button {
+            background-color: darkslategray; /* Green */
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+            .btn-group .button:hover {
+                background-color: white;
+                color: black;
+            }
+
+        @media screen and (max-width:857px) {
+            .btn-group {
+                flex-direction: column;
+                display: flex;
+                float: none;
+                width: 100%;
+            }
+        }
+
+        @media screen and (max-width:857px) {
+            .btn-group #search {
+                flex-direction: column;
+                display: flex;
+                float: none;
+                width: 100%;
+            }
+        }
+
+        @media screen and (max-width:857px) {
+            .container .ustaltnav {
+                position: relative;
+            }
+
+            .container .anaDiv {
+                flex-direction: column;
+                display: flex;
+            }
+
+                .container .anaDiv .sagDiv {
+                    width: 100%;
+                }
+
+                .container .anaDiv .solDiv {
+                    width: 100%;
+                }
+
+                .container .anaDiv img {
+                    width: 100%;
+                }
+        }
+
+        #search {
+            height: 45px;
+            width: 300px;
+            float: right;
+            background-color: white;
+            color: black;
+            border-radius: 5px;
+            border: solid 2px Orange;
+        }
+        /* <!-- NAVBAR End-- >*/
+        /* <!-- Article Area START-- >*/
+        .sag {
+            border-radius: 100px;
+        }
+
+        .sol {
+            border-radius: 40px;
+        }
+
+        .anaDiv {
+            display: flex;
+            width: 100%;
+            flex-wrap: nowrap;
+        }
+
+        .sagDiv {
+            background-color: lightgray;
+            width: 28%;
+            margin-left: 2%;
+        }
+
+        .solDiv {
+            width: 70%;
+        }
+
+        .container .anaDiv img {
+            width: 100%;
+        }
+
+        #btn0 {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 30px;
+            z-index: 99;
+            font-size: 18px;
+            border: none;
+            outline: none;
+            background-color: red;
+            color: white;
+            cursor: pointer;
+            padding: 15px;
+            border-radius: 4px;
+        }
+
+            #btn0:hover {
+                background-color: #555;
+            }
+        /* <!-- Article Area START-- >*/
+        .footer {
+            height: 100px;
+            background-color: gray;
+            width: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!--top comunication nav bar START-->
+        <div class="col-12 ustbilgi">
+            <div class="row">
+                <div class="col-lg-5 col-md-6 iletisim" id="solbilgi">
+                    <a href="#" class="buttn"> <i class="fa-solid fa-envelope buttn"></i>e-mail</a>
+                    |
+                    <a href="#"><i class="fa-solid fa-phone buttn"></i> 0555 555 55 55 | X-Store ®</a>
+                </div>
+                <div class="col-lg-4 col-md-6 Marka float-right ml-auto">
+                    <a href="#"><i class="fa-brands fa-facebook-square"></i>FaceBook</a>
+                    |
+                    <a href="#"><i class="fa-brands fa-instagram"></i> Instagram</a>
+                    |
+                    <a href="#"><i class="fa-brands fa-youtube"></i>YouTube</a>
+                </div>
+            </div>
+        </div>
+        <!--top comunication nav bar END-->
+        <!--Start Slider start-->
+        <div class="col-12 ust">
+            <div class="animationtext">
+                <h1>My X-Blog</h1>
+                <h3>Farklı bir deneyim için hazır mısınız?</h3>
+            </div>
+        </div>
+        <!--Start Slider END-->
+        <!--NAVBAR START-->
+        <div class="col-12 ustaltnav">
+            <div class="btn-group">
+                <button class="button res">Anasayfa</button>
+                <button class="button res">Hakkımızda</button>
+                <button class="button res">Ürünler</button>
+                <button class="button res">İletişim</button>
+                <input id="search" class="res" type="text" name="search" placeholder="Neye Bakmıştınız" />
+            </div>
+        </div>
+        <!--NAVBAR END-->
+        <!--Article Area Start-->
+        <div class="anaDiv">
+            <div class="solDiv">
+                <br />
+                <h2>Tatilden notlar</h2>
+                <h5>
+                    Title Description, Mart 7, 2022
+                </h5>
+                <br />
+                <img src="https://picsum.photos/id/211/700/300" class="img-thumbnail sol" alt="...">
+                <br />
+                <p>
+                    Nisi quis eleifend quam adipiscing vitae. Amet volutpat consequat mauris nunc congue nisi
+                    vitae suscipit tellus. Mollis aliquam ut porttitor leo a diam sollicitudin. At in tellus integer
+                    feugiat scelerisque varius morbi enim. Id neque aliquam vestibulum morbi blandit cursus
+                    risus at. Id consectetur purus ut faucibus. Quisque non tellus orci ac auctor. Elementum nisi
+                    quis eleifend quam adipiscing. Et malesuada fames ac turpis egestas. Donec ultrices
+                    tincidunt arcu non sodales neque sodales. Gravida cum sociis natoque penatibus et magnis
+                    dis parturient montes.
+                </p>
+                <br />
+                <img src="https://picsum.photos/id/177/700/300" class="img-thumbnail sol" alt="...">
+                <br />
+                <p>
+                    Nisi quis eleifend quam adipiscing vitae. Amet volutpat consequat mauris nunc congue nisi
+                    vitae suscipit tellus. Mollis aliquam ut porttitor leo a diam sollicitudin. At in tellus integer
+                    feugiat scelerisque varius morbi enim. Id neque aliquam vestibulum morbi blandit cursus
+                    risus at. Id consectetur purus ut faucibus. Quisque non tellus orci ac auctor. Elementum nisi
+                    quis eleifend quam adipiscing. Et malesuada fames ac turpis egestas. Donec ultrices
+                    tincidunt arcu non sodales neque sodales. Gravida cum sociis natoque penatibus et magnis
+                    dis parturient montes.
+                </p>
+                <br />
+                <img src="https://picsum.photos/id/199/700/300" class="img-thumbnail sol" alt="...">
+                <br />
+                <p>
+                    Nisi quis eleifend quam adipiscing vitae. Amet volutpat consequat mauris nunc congue nisi
+                    vitae suscipit tellus. Mollis aliquam ut porttitor leo a diam sollicitudin. At in tellus integer
+                    feugiat scelerisque varius morbi enim. Id neque aliquam vestibulum morbi blandit cursus
+                    risus at. Id consectetur purus ut faucibus. Quisque non tellus orci ac auctor. Elementum nisi
+                    quis eleifend quam adipiscing. Et malesuada fames ac turpis egestas. Donec ultrices
+                    tincidunt arcu non sodales neque sodales. Gravida cum sociis natoque penatibus et magnis
+                    dis parturient montes.
+                </p>
+                <br />
+                <img src="https://picsum.photos/id/185/700/300" class="img-thumbnail sol" alt="...">
+                <br />
+                <p>
+                    Nisi quis eleifend quam adipiscing vitae. Amet volutpat consequat mauris nunc congue nisi
+                    vitae suscipit tellus. Mollis aliquam ut porttitor leo a diam sollicitudin. At in tellus integer
+                    feugiat scelerisque varius morbi enim. Id neque aliquam vestibulum morbi blandit cursus
+                    risus at. Id consectetur purus ut faucibus. Quisque non tellus orci ac auctor. Elementum nisi
+                    quis eleifend quam adipiscing. Et malesuada fames ac turpis egestas. Donec ultrices
+                    tincidunt arcu non sodales neque sodales. Gravida cum sociis natoque penatibus et magnis
+                    dis parturient montes.
+                </p>
+            </div>
+            <div class="sagDiv">
+                <br /> <br />
+                <h2> Yazar Hakkında </h2>
+                <br />
+                <h5>Aşağıdaki yakışıklı yazar işte </h5>
+                <img src="https://picsum.photos/id/240/300/200" class="img-thumbnail sag" alt="...">
+            </div>
+        </div>
+        <!--Article Area Start-->
+        <!--FOOTER Start-->
+        <div class="footer">
+            <hr />
+            <h2>THİS İS FOOTER</h2>
+        </div>
+        <!--FOOTER End-->
+    </div>
+    </div>
+    <button onclick="topFunction()" id="btn0" title="Go to top">Top</button>
+    <script>
+        //Get the button
+        var mybutton = document.getElementById("btn0");
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function () { scrollFunction() };
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+</body>
+</html>
